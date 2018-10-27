@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <hr width="100%">
+ 			 <hr width="100%">
+
+			 
+			<div class="row">
+				 <div class="boton col-md-12">
+      					  <div class="title col-md-12 text-center">
+						<h1><font face="Segoe UI" size="7">REPORTES DIAS DE ESTUDIO</font></h1>
+						</div>
+						<a href="/PanelDeControl" class="btn btn-primary">Volver</a>
+  
+           			 </div>
+           			</div> 
+      <div class="row post">
+      <div class="col-md-3">
+      	<h4><font color="#0000FF">APELLIDO Y NOMBRE</font></h4>
+      </div>
+	  <div class="col-md-3">
+	  <h4><font color="#0000FF">DNI</font></h4>
+      </div>
+	  <div class="col-md-3">
+	  <h4><font color="#0000FF">MATERIA</font></h4>
+      </div>
+	  
+	  <div class="col-md-3">
+	  <h4><font color="#0000FF">FECHA</font></h4>
+     
+       
+		
+      
+	  
+     </div> 
+        
+	
+    </div>
+      
+
+  {% for rrhhdiaestudio in posts %}
+    <div class="row post">
+      <div class="col-md-3">
+        <h4>{{rrhhdiaestudio.apellidoynombre}}</h4>
+      </div>
+	  <div class="col-md-3">
+        <h4>{{rrhhdiaestudio.dni}}</h4>
+      </div>
+	  <div class="col-md-3">
+        <h4>{{rrhhdiaestudio.materia}}</h4>
+      </div>
+	  <div class="col-md-3">
+        <h4>{{rrhhdiaestudio.fecha}}</h4>
+      </div>
+       
+      
+      
+	  
+      <div class="col-md-12 acciones">
+		<a href="/rrhhdiaestudio/editar/{{rrhhdiaestudio.id}}"><i class="fa fa-pencil fa-fw"></i>Editar</a>
+        <a href="/rrhhdiaestudio/eliminar/{{rrhhdiaestudio.id}}"><i class="fa fa-trash-o fa-fw"></i>Eliminar</a>
+        
+      </div>
+       </div> 
+    
+  {% endfor%}
+{% endblock %}

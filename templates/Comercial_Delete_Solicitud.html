@@ -1,0 +1,45 @@
+{% extends "base_sin_img.html" %}
+
+{% block content %} 
+
+  
+		<div class="row text-center">
+			<h2>Estas seguro que quiere borrar esta Solicitud?</h2>
+		</div>
+		<div class="row post">
+			<div class="col-md-3">
+				<h4><font color="#0000FF">APELLIDO Y NOMBRE</font></h4>
+				<h5>{{post.apellidoynombre}}</h5>
+			</div>
+			<div class="col-md-1">
+				<h4><font color="#0000FF">DNI</font></h4>
+				<h5>{{post.dni}}</h5>
+			</div>
+			<div class="col-md-3">
+				<h4><font color="#0000FF">CORREO</font></h4>
+				<h5>{{post.correo}}</h5>
+			</div>
+			<div class="col-md-2">
+					<h4><font color="#0000FF">TELEFONO</font></h4>
+					<h5>{{post.telefono}}</h5>
+				</div>
+				<div class="col-md-2">
+				<h4><font color="#0000FF">EVENTO</font></h4>
+				<h5>{{post.evento}}</h5>
+				</div>
+				
+				
+        
+		</div>
+
+		<br>
+ 
+			<form action="/comercial/eliminar/{{post.id}}" method = 'post'>
+				<button type="submit" class="btn btn-danger" id="submit" type="submit">Yes</button>
+				<a class="btn btn-primary" href="/Comercial_Reportes" role="button">No</a>
+			</form>   
+{% endblock %}
+
+
+
+

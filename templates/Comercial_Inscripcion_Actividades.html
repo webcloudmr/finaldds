@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+
+             <hr width="100%">
+ 			 <hr width="100%">
+ 			 
+
+			 
+			<div class="row">
+				 <div class="boton col-md-12">
+      					 <div class="title col-md-12 text-center">
+						<h1><font face="Segoe UI" size="7">INSCRIPCION ACTIVIDADES</font></h1>
+						</div>
+						   <p align="left">
+
+      				<a href="/Comercial_Home" class="btn btn-primary">Volver</a>
+						
+      					  
+           			 </div>
+           			</div>
+      <form method="post">
+	  
+		<p>Apellido y Nombre:</p>
+			<input type="text"  name="apellidoynombre" size="30">
+			<br>
+			<br>
+        <p>DNI:</p>
+			<input type="text"  name="dni" size="10">
+			<br>
+		<p>Correo:</p>
+			<input type="text"  name="correo" size="30">
+			<br>
+		<p>Telefono:</p>
+			<input type="text"  name="telefono" size="10">
+			<br>
+        <br>
+        <p>Eventos Disponibles</p>
+		
+		  <select name="evento">
+			<option value="Brindis Fin de Año">Brindis Fin de Año</option>
+  			<option value="Egreso Residentes">Egreso Residentes</option>
+  			<option value="Charla Informativa Ingreso Residentes 2019">ECharla Informativa Ingreso Residentes 2019</option>
+			<option value="2K Carrera DM 01/12/2018">2K Carrera DM 01/12/2018</option>
+  			<option value="4K Carrera DM 08/12/2018">4K Carrera DM 08/12/2018</option>
+			
+
+		</select></p>
+        
+		
+		
+		<br>
+		<br>
+		
+        <button type="submit" class="btn btn-primary"><font face="Segoe UI">Enviar</font></button>
+		
+      	
+		</font>
+      </form>
+    </div>
+  </div>
+{% endblock %}

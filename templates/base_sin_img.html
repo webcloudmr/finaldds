@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DM</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" >Diagnostico Medico</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="/RRHH_Home">OFICINA DE PERSONAL</a></li>
+        <li><a href="/Comercial_Home">COMERCIAL</a></li>
+		<li><a href="/Operaciones_Home">OPERACIONES</a></li>
+        
+		<li><a href="/PanelDeControl">PANEL DE CONTROL</a></li>
+        
+		
+		
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if username %}
+        <li><a href="/login"><span class="glyphicon glyphicon-user"></span> {{username}} | Cerrar Sesion </a></li>
+		
+        {% else %}
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+        {% endif %}
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+  <div class="container">
+    
+    <div class ="row">
+				<div class ="col-md-12">
+					
+					
+					
+				</div>
+				
+	
+     
+        
+          {% block content %}
+		  <br>
+          {% endblock %}
+        
+   </div>
+
+  </div>
+
+
+</body>
+
+</html>

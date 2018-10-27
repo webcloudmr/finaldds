@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+
+             <hr width="100%">
+ 			 <hr width="100%">
+ 			 
+
+			 
+			<div class="row">
+				 <div class="boton col-md-12">
+      					 <div class="title col-md-12 text-center">
+						<h1><font face="Segoe UI" size="7">SOLICITUD OPERACIONES</font></h1>
+						</div>
+      				<a href="/Operaciones_Home" class="btn btn-primary">Volver</a>
+						<br>
+						<br>
+      					  
+           			 </div>
+           			</div>
+      <form method="post">
+	  
+		<p>Apellido y Nombre:</p>
+			<input type="text"  name="apellidoynombre" size="30">
+			<br>
+			<br>
+        <p>Sede:</p>
+        
+        <select name="sede">
+  			<option value="junin">Junin</option>
+ 			<option value="cabildo">Cabildo</option>
+  		</select></p>
+        
+        
+		<p>Piso:</p>
+         <select name="piso">
+  			<option value="ss">SS</option>
+ 			<option value="pb">PB</option>
+  			<option value="1">1</option>
+ 			<option value="2">2</option>
+ 			<option value="3">3</option>
+ 			<option value="4">4</option>
+ 			<option value="5">5</option>
+ 			<option value="6">6</option>
+ 			<option value="7">7</option>
+ 			<option value="8">8</option>
+			<option value="9">9</option>
+		</select></p>
+         
+		
+		
+        <p>Detalle de Inconveniente:</p>
+        <textarea name="inconveniente" class="form-control" rows="5"></textarea>
+        <br>
+		
+		<br>
+		<br>
+		
+        <button type="submit" class="btn btn-primary"><font face="Segoe UI">Enviar</font></button>
+		
+      	
+		</font>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+
+             <hr width="100%">
+ 			 <hr width="100%">
+ 			 
+
+			 
+			<div class="row">
+				 <div class="boton col-md-12">
+      					  <div class="title col-md-12 text-center">
+						<h1><font face="Segoe UI" size="7">SOLICITUD VACACIONES</font></h1>
+						</div>
+      					  
+           			 		<p align="left">
+      					  					
+					<a href="/RRHH_Home" class="btn btn-primary">Volver</a>
+					
+           			 
+      					  
+           			 </div>
+           			</div>
+      <form method="post">
+        <p>Apellido y Nombre</p>
+        <input type="text"  name="apellidoynombre" size="30">
+		<br>
+		<br>
+		<p>DNI</p>
+        <input type="text"  name="dni" size="15">
+		<br>
+		<p>FechaInicio</p>
+        <input type="date"  name="fechainicio" size="30">
+		<br>
+		
+		      
+        
+        
+		<p>FechaFin</p>
+        <input type="date"  name="fechafin" size="30">
+		
+        
+        </p>
+		<p>
+        <br>
+		
+      
+        <button type="submit" class="btn btn-primary"><font face="Segoe UI">Solicitar</font></button>
+		      	
+
+      	</font>
+      	</p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

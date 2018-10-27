@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+					
+           			
+ 			 <hr width="100%">
+ 			 <hr width="100%">
+
+			 
+			<div class="row">
+				 <div class="boton col-md-12">
+      					  <div class="title col-md-12 text-center">
+						<h1><font face="Segoe UI" size="7">REPORTES COMERCIAL</font></h1>
+						</div>
+						<a href="/PanelDeControl" class="btn btn-primary">Volver</a>
+  
+           			 </div>
+           			</div> 
+      
+       <div class="row post">
+      <div class="col-md-3">
+      	<h4><font color="#0000FF">APELLIDO Y NOMBRE</font></h4>
+      </div>
+	  <div class="col-md-1">
+	  <h4><font color="#0000FF">DNI</font></h4>
+      </div>
+	  <div class="col-md-3">
+	  <h4><font color="#0000FF">CORREO</font></h4>
+      </div>
+	  <div class="col-md-2">
+	  <h4><font color="#0000FF">TELEFONO</font></h4>
+      </div>
+	   <div class="col-md-2">
+	  <h4><font color="#0000FF">EVENTO</font></h4>
+      </div>
+	   <div class="col-md-1">
+	  <h4><font color="#0000FF">ESTADO</font></h4>
+      </div>
+	  
+       
+		
+      
+	  
+      
+        
+	
+    </div>
+
+  {% for comercial in posts %}
+    <div class="row post">
+      <div class="col-md-3">
+        <h5>{{comercial.apellidoynombre}}</h5>
+      </div>
+	  <div class="col-md-1">
+        <h5>{{comercial.dni}}</h5>
+      </div>
+	  <div class="col-md-3">
+        <h5>{{comercial.correo}}</h5>
+      </div>
+	  <div class="col-md-2">
+        <h5>{{comercial.telefono}}</h5>
+      </div>
+	  <div class="col-md-2">
+        <h5>{{comercial.evento}}</h5>
+      </div>
+	  <div class="col-md-1">
+        <h5>{{comercial.estado}}</h5>
+      </div>
+       
+		<div class="col-md-12 acciones">
+		<a href="/comercial/editar/{{comercial.id}}"><i class="fa fa-pencil fa-fw"></i></a>
+        <a href="/comercial/eliminar/{{comercial.id}}"><i class="fa fa-trash-o fa-fw"></i></a>
+        
+      </div>
+      
+	  
+      
+        
+	
+    </div>
+	
+  {% endfor%}
+{% endblock %}

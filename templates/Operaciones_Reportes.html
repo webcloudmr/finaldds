@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+					
+           			
+ 			 <hr width="100%">
+ 			 <hr width="100%">
+
+			 
+			<div class="row">
+				 <div class="boton col-md-12">
+      					  <div class="title col-md-12 text-center">
+						<h1><font face="Segoe UI" size="7">REPORTES OPERACIONES</font></h1>
+						</div>
+						<a href="/PanelDeControl" class="btn btn-primary">Volver</a>
+  
+           			 </div>
+           			</div> 
+      
+       <div class="row post">
+      <div class="col-md-3">
+      	<h4><font color="#0000FF">APELLIDO Y NOMBRE</font></h4>
+      </div>
+	  <div class="col-md-2">
+	  <h4><font color="#0000FF">SEDE</font></h4>
+      </div>
+	  <div class="col-md-2">
+	  <h4><font color="#0000FF">PISO</font></h4>
+      </div>
+	  <div class="col-md-3">
+	  <h4><font color="#0000FF">INCONVENIENTE</font></h4>
+      </div>
+	  <div class="col-md-1">
+	  <h4><font color="#0000FF">ESTADO</font></h4>
+      </div>
+
+       
+		
+      
+	  
+      
+        
+	
+    </div>
+
+  {% for operaciones in posts %}
+    <div class="row post">
+      <div class="col-md-3">
+        <h4>{{operaciones.apellidoynombre}}</h4>
+      </div>
+	  <div class="col-md-2">
+        <h4>{{operaciones.sede}}</h4>
+      </div>
+	  <div class="col-md-2">
+        <h4>{{operaciones.piso}}</h4>
+      </div>
+	  <div class="col-md-3">
+        <h4>{{operaciones.inconveniente}}</h4>
+      </div>
+	  <div class="col-md-1">
+        <h4>{{operaciones.estado}}</h4>
+      </div>
+	  
+       
+		<div class="col-md-12 acciones">
+		<a href="/operaciones/editar/{{operaciones.id}}"><i class="fa fa-pencil fa-fw"></i>Editar</a>
+        <a href="/operaciones/eliminar/{{operaciones.id}}"><i class="fa fa-trash-o fa-fw"></i>Eliminar</a>
+        
+      </div>
+      
+	  
+      
+        
+	
+    </div>
+	
+  {% endfor%}
+{% endblock %}
